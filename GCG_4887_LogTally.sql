@@ -1,0 +1,16 @@
+CREATE TABLE "GCG_4887_LogTally"(
+ "BPO" VARCHAR(7),
+ "PO" VARCHAR(7),
+ "Line" VARCHAR(3),
+ "Part" VARCHAR(20),
+ "Partdesc" VARCHAR(50),
+ "Length" NUMERIC(8,2),
+ "Diam" NUMERIC(8,2),
+ "Grade" VARCHAR(20),
+ "Lot" INTEGER NOT NULL ,
+ "Vendor" VARCHAR(50),
+ "Feet" NUMERIC(8,2),
+ "HCMpy" VARCHAR(30),
+ "HName" VARCHAR(30),
+ "Logger" VARCHAR(30),
+ PRIMARY KEY ("Lot"));
