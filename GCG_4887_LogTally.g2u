@@ -1,0 +1,1946 @@
+Program.Sub.ScreenSU.Start
+Gui.Form_LogScaling..Create
+Gui.Form_LogScaling..Caption("Log Tally")
+Gui.Form_LogScaling..Size(16170,10200)
+Gui.Form_LogScaling..MinX(0)
+Gui.Form_LogScaling..MinY(0)
+Gui.Form_LogScaling..Position(0,0)
+Gui.Form_LogScaling..BackColor(-2147483633)
+Gui.Form_LogScaling..MousePointer(0)
+Gui.Form_LogScaling..Event(UnLoad,Form_UnLoad)
+Gui.Form_LogScaling..MaxButton(False)
+Gui.Form_LogScaling..MinButton(False)
+Gui.Form_LogScaling.txtPO.Create(TextBox,"",True,1725,525,0,345,600,True,0,"Arial",18,-2147483643,1)
+Gui.Form_LogScaling.txtPO.TabStop(True)
+Gui.Form_LogScaling.txtPO.TabIndex(1)
+Gui.Form_LogScaling.txtPO.Event(KeyPressEnter,txtPO_KeyPressEnter)
+Gui.Form_LogScaling.cmd_TxtPO.Create(Button)
+Gui.Form_LogScaling.cmd_TxtPO.Size(705,570)
+Gui.Form_LogScaling.cmd_TxtPO.Position(2175,570)
+Gui.Form_LogScaling.cmd_TxtPO.Caption("^")
+Gui.Form_LogScaling.cmd_TxtPO.Event(Click,cmd_TxtPO_Click)
+Gui.Form_LogScaling.cmd_TxtPO.TabStop(True)
+Gui.Form_LogScaling.cmd_TxtPO.TabIndex(2)
+Gui.Form_LogScaling.lbl_txtPO.Create(Label,"Load# (Release PO):",True,3810,390,0,345,240,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.lbl_txtPO.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd_AddLog.Create(Button)
+Gui.Form_LogScaling.cmd_AddLog.Size(2025,900)
+Gui.Form_LogScaling.cmd_AddLog.Position(8400,1515)
+Gui.Form_LogScaling.cmd_AddLog.Caption("+ Log")
+Gui.Form_LogScaling.cmd_AddLog.BackColor(-2147483627)
+Gui.Form_LogScaling.cmd_AddLog.ForeColor(16777215)
+Gui.Form_LogScaling.cmd_AddLog.FontSize(18)
+Gui.Form_LogScaling.cmd_AddLog.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd_AddLog.Event(Click,cmd_AddLog_Click)
+Gui.Form_LogScaling.cmd_AddLog.TabStop(True)
+Gui.Form_LogScaling.cmd_AddLog.TabIndex(7)
+Gui.Form_LogScaling.ddlSortCode.Create(DropDownList)
+Gui.Form_LogScaling.ddlSortCode.Size(4605,660)
+Gui.Form_LogScaling.ddlSortCode.Position(5055,570)
+Gui.Form_LogScaling.ddlSortCode.FontSize(24)
+Gui.Form_LogScaling.ddlSortCode.TabStop(True)
+Gui.Form_LogScaling.ddlSortCode.TabIndex(3)
+Gui.Form_LogScaling.ddlSortCode.Event(Click,ddlSortCode_Click)
+Gui.Form_LogScaling.lblLength.Create(Label,"Length",True,1350,435,0,3540,1470,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.lbl_txtPO2.Create(Label,"Species",True,1545,390,0,5070,210,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.txtDiam.Create(TextBox,"",True,1215,525,0,5340,1860,True,0,"Arial",18,-2147483643,1)
+Gui.Form_LogScaling.txtDiam.TabStop(True)
+Gui.Form_LogScaling.txtDiam.TabIndex(5)
+Gui.Form_LogScaling.txtDiam.NumericOnly(1)
+Gui.Form_LogScaling.txtDiam.Event(Click,txtDiam_Click)
+Gui.Form_LogScaling.txtDiam.Event(Change,txtDiam_Change)
+Gui.Form_LogScaling.txtDiam.Event(GotFocus,txtDiam_GotFocus)
+Gui.Form_LogScaling.lblDiam.Create(Label,"Diam.",True,1350,435,0,5340,1470,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.txtGrade.Create(TextBox,"",True,1215,525,0,7065,1860,True,0,"Arial",18,-2147483643,1)
+Gui.Form_LogScaling.txtGrade.TabStop(True)
+Gui.Form_LogScaling.txtGrade.TabIndex(6)
+Gui.Form_LogScaling.txtGrade.Event(Click,txtGrade_Click)
+Gui.Form_LogScaling.txtGrade.NumericOnly(1)
+Gui.Form_LogScaling.txtGrade.Event(GotFocus,txtGrade_GotFocus)
+Gui.Form_LogScaling.lblGrade.Create(Label,"Grade",True,1350,435,0,7065,1470,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.GsGc_LogTally.Create(GsGridControl)
+Gui.Form_LogScaling.GsGc_LogTally.Size(11265,5340)
+Gui.Form_LogScaling.GsGc_LogTally.Position(330,3120)
+Gui.Form_LogScaling.GsGc_LogTally.Event(RowClick,GsGc_LogTally_RowClick)
+Gui.Form_LogScaling.txtTotalLogs.Create(TextBox,"",True,1260,525,0,7395,8790,True,0,"Arial",18,-2147483643,1)
+Gui.Form_LogScaling.txtTotalBoardFeet.Create(TextBox,"",True,2160,525,0,9630,8790,True,0,"Arial",18,-2147483643,1)
+Gui.Form_LogScaling.lbl_TotalLogs.Create(Label,"Total Logs:",True,2250,465,0,5370,8865,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.lbl_TotalLogs2.Create(Label,"Feet:",True,1035,450,0,8655,8850,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.cmd_Save.Create(Button)
+Gui.Form_LogScaling.cmd_Save.Size(1290,570)
+Gui.Form_LogScaling.cmd_Save.Position(375,8790)
+Gui.Form_LogScaling.cmd_Save.Caption("Save")
+Gui.Form_LogScaling.cmd_Save.FontSize(18)
+Gui.Form_LogScaling.cmd_Save.Event(Click,cmd_Save_Click)
+Gui.Form_LogScaling.cmd_Save.TabStop(True)
+Gui.Form_LogScaling.cmd_Save.TabIndex(8)
+Gui.Form_LogScaling.cmd_Cancel.Create(Button)
+Gui.Form_LogScaling.cmd_Cancel.Size(1515,570)
+Gui.Form_LogScaling.cmd_Cancel.Position(1770,8790)
+Gui.Form_LogScaling.cmd_Cancel.Caption("Cancel")
+Gui.Form_LogScaling.cmd_Cancel.FontSize(18)
+Gui.Form_LogScaling.cmd_Cancel.Event(Click,cmd_Cancel_Click)
+Gui.Form_LogScaling.cmd_Cancel.TabStop(True)
+Gui.Form_LogScaling.cmd_Cancel.TabIndex(9)
+Gui.Form_LogScaling.lbl_Part.Create(Label,"-",True,3000,390,0,435,2010,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.lblLength2.Create(Label,"Line: Part#",True,2475,435,0,405,1530,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.txtLength.Create(TextBox,"",True,1215,525,0,3630,1845,True,0,"Arial",18,-2147483643,1)
+Gui.Form_LogScaling.txtLength.TabStop(True)
+Gui.Form_LogScaling.txtLength.TabIndex(4)
+Gui.Form_LogScaling.txtLength.NumericOnly(1)
+Gui.Form_LogScaling.txtLength.Event(Click,txtLength_Click)
+Gui.Form_LogScaling.txtLength.Event(Change,txtLength_Change)
+Gui.Form_LogScaling.txtLength.Event(GotFocus,txtLength_GotFocus)
+Gui.Form_LogScaling.frame1.Create(Frame)
+Gui.Form_LogScaling.frame1.Size(4080,5115)
+Gui.Form_LogScaling.frame1.Position(11760,3270)
+Gui.Form_LogScaling.cmd0.Create(Button)
+Gui.Form_LogScaling.cmd0.Size(1125,960)
+Gui.Form_LogScaling.cmd0.Position(240,3075)
+Gui.Form_LogScaling.cmd0.Parent("frame1")
+Gui.Form_LogScaling.cmd0.Caption("0")
+Gui.Form_LogScaling.cmd0.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd0.FontSize(40)
+Gui.Form_LogScaling.cmd0.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd1.Create(Button)
+Gui.Form_LogScaling.cmd1.Size(1125,960)
+Gui.Form_LogScaling.cmd1.Position(240,2100)
+Gui.Form_LogScaling.cmd1.Parent("frame1")
+Gui.Form_LogScaling.cmd1.Caption("1")
+Gui.Form_LogScaling.cmd1.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd1.FontSize(40)
+Gui.Form_LogScaling.cmd1.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd2.Create(Button)
+Gui.Form_LogScaling.cmd2.Size(1125,960)
+Gui.Form_LogScaling.cmd2.Position(1485,2100)
+Gui.Form_LogScaling.cmd2.Parent("frame1")
+Gui.Form_LogScaling.cmd2.Caption("2")
+Gui.Form_LogScaling.cmd2.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd2.FontSize(40)
+Gui.Form_LogScaling.cmd2.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd3.Create(Button)
+Gui.Form_LogScaling.cmd3.Size(1125,960)
+Gui.Form_LogScaling.cmd3.Position(2730,2100)
+Gui.Form_LogScaling.cmd3.Parent("frame1")
+Gui.Form_LogScaling.cmd3.Caption("3")
+Gui.Form_LogScaling.cmd3.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd3.FontSize(40)
+Gui.Form_LogScaling.cmd3.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd4.Create(Button)
+Gui.Form_LogScaling.cmd4.Size(1125,960)
+Gui.Form_LogScaling.cmd4.Position(240,1125)
+Gui.Form_LogScaling.cmd4.Parent("frame1")
+Gui.Form_LogScaling.cmd4.Caption("4")
+Gui.Form_LogScaling.cmd4.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd4.FontSize(40)
+Gui.Form_LogScaling.cmd4.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd5.Create(Button)
+Gui.Form_LogScaling.cmd5.Size(1125,960)
+Gui.Form_LogScaling.cmd5.Position(1485,1125)
+Gui.Form_LogScaling.cmd5.Parent("frame1")
+Gui.Form_LogScaling.cmd5.Caption("5")
+Gui.Form_LogScaling.cmd5.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd5.FontSize(40)
+Gui.Form_LogScaling.cmd5.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd6.Create(Button)
+Gui.Form_LogScaling.cmd6.Size(1125,960)
+Gui.Form_LogScaling.cmd6.Position(2730,1125)
+Gui.Form_LogScaling.cmd6.Parent("frame1")
+Gui.Form_LogScaling.cmd6.Caption("6")
+Gui.Form_LogScaling.cmd6.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd6.FontSize(40)
+Gui.Form_LogScaling.cmd6.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd7.Create(Button)
+Gui.Form_LogScaling.cmd7.Size(1125,960)
+Gui.Form_LogScaling.cmd7.Position(240,165)
+Gui.Form_LogScaling.cmd7.Parent("frame1")
+Gui.Form_LogScaling.cmd7.Caption("7")
+Gui.Form_LogScaling.cmd7.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd7.FontSize(40)
+Gui.Form_LogScaling.cmd7.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd8.Create(Button)
+Gui.Form_LogScaling.cmd8.Size(1125,960)
+Gui.Form_LogScaling.cmd8.Position(1485,165)
+Gui.Form_LogScaling.cmd8.Parent("frame1")
+Gui.Form_LogScaling.cmd8.Caption("8")
+Gui.Form_LogScaling.cmd8.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd8.FontSize(40)
+Gui.Form_LogScaling.cmd8.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmd9.Create(Button)
+Gui.Form_LogScaling.cmd9.Size(1125,960)
+Gui.Form_LogScaling.cmd9.Position(2730,165)
+Gui.Form_LogScaling.cmd9.Parent("frame1")
+Gui.Form_LogScaling.cmd9.Caption("9")
+Gui.Form_LogScaling.cmd9.Event(Click,cmdNumber_Click)
+Gui.Form_LogScaling.cmd9.FontSize(40)
+Gui.Form_LogScaling.cmd9.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmdP.Create(Button)
+Gui.Form_LogScaling.cmdP.Size(1125,960)
+Gui.Form_LogScaling.cmdP.Position(2730,3075)
+Gui.Form_LogScaling.cmdP.Parent("frame1")
+Gui.Form_LogScaling.cmdP.Caption(".")
+Gui.Form_LogScaling.cmdP.Event(Click,cmdPClick)
+Gui.Form_LogScaling.cmdP.FontSize(40)
+Gui.Form_LogScaling.cmdP.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmdPrev.Create(Button)
+Gui.Form_LogScaling.cmdPrev.Size(1125,960)
+Gui.Form_LogScaling.cmdPrev.Position(705,4095)
+Gui.Form_LogScaling.cmdPrev.Parent("frame1")
+Gui.Form_LogScaling.cmdPrev.Caption("<<")
+Gui.Form_LogScaling.cmdPrev.Event(Click,cmdPrev_Click)
+Gui.Form_LogScaling.cmdPrev.BackColor(-2147483632)
+Gui.Form_LogScaling.cmdPrev.FontSize(40)
+Gui.Form_LogScaling.cmdPrev.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.cmdNext.Create(Button)
+Gui.Form_LogScaling.cmdNext.Size(1125,960)
+Gui.Form_LogScaling.cmdNext.Position(2385,4095)
+Gui.Form_LogScaling.cmdNext.Parent("frame1")
+Gui.Form_LogScaling.cmdNext.Caption(">>")
+Gui.Form_LogScaling.cmdNext.Event(Click,cmdNext_Click)
+Gui.Form_LogScaling.cmdNext.BackColor(-2147483632)
+Gui.Form_LogScaling.cmdNext.FontSize(40)
+Gui.Form_LogScaling.cmdNext.FontStyle(True,False,False,False,False)
+Gui.Form_LogScaling.frame2.Create(Frame)
+Gui.Form_LogScaling.frame2.Size(10755,225)
+Gui.Form_LogScaling.frame2.Position(510,2850)
+Gui.Form_LogScaling.lbl_txtPO3.Create(Label,"Label Printer:",True,2325,390,0,10320,285,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.ddlPrinter.Create(DropDownList)
+Gui.Form_LogScaling.ddlPrinter.Size(3000,660)
+Gui.Form_LogScaling.ddlPrinter.Position(12615,105)
+Gui.Form_LogScaling.ddlPrinter.FontSize(24)
+Gui.Form_LogScaling.lblVendor.Create(Label,"",True,3855,480,0,11985,8535,True,0,"Arial",10,-2147483633,0)
+Gui.Form_LogScaling.lblcost.Create(Label,"",False,1935,255,0,9960,8265,True,0,"Arial",8,-2147483633,0)
+Gui.Form_LogScaling.lblLOT.Create(Label,"",True,2310,255,0,375,2430,True,0,"Arial",10,-2147483633,0)
+Gui.Form_LogScaling.cmdclear.Create(Button)
+Gui.Form_LogScaling.cmdclear.Visible(False)
+Gui.Form_LogScaling.cmdclear.Size(1245,375)
+Gui.Form_LogScaling.cmdclear.Position(8475,2475)
+Gui.Form_LogScaling.cmdclear.Caption("&Clear")
+Gui.Form_LogScaling.cmdclear.Event(Click,cmdclear_Click)
+Gui.Form_LogScaling.lbl_txtPO4.Create(Label,"Logger:",True,1380,390,0,11265,1065,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.lbl_txtPO5.Create(Label,"Hauling Co:",True,2085,390,0,10560,1935,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.lblDriver.Create(Label,"Driver:",True,1230,390,0,11415,2775,True,0,"Arial",18,-2147483633,0)
+Gui.Form_LogScaling.ddlLogger.Create(DropDownList)
+Gui.Form_LogScaling.ddlLogger.Size(3015,660)
+Gui.Form_LogScaling.ddlLogger.Position(12615,915)
+Gui.Form_LogScaling.ddlLogger.FontSize(24)
+Gui.Form_LogScaling.ddlHCmpy.Create(DropDownList)
+Gui.Form_LogScaling.ddlHCmpy.Size(3000,660)
+Gui.Form_LogScaling.ddlHCmpy.Position(12615,1785)
+Gui.Form_LogScaling.ddlHCmpy.Event(Click,ddlHCmpy_Click)
+Gui.Form_LogScaling.ddlHCmpy.FontSize(24)
+Gui.Form_LogScaling.ddlDriver.Create(DropDownList)
+Gui.Form_LogScaling.ddlDriver.Size(3015,660)
+Gui.Form_LogScaling.ddlDriver.Position(12615,2535)
+Gui.Form_LogScaling.ddlDriver.FontSize(24)
+Gui.Form_LogScaling.lblBPO.Create(Label,"",True,3210,390,0,11985,9225,True,0,"Arial",10,-2147483633,0)
+Gui.Form_LogScaling.chkXlog.Create(CheckBox)
+Gui.Form_LogScaling.chkXlog.Size(1560,420)
+Gui.Form_LogScaling.chkXlog.Position(3630,2430)
+Gui.Form_LogScaling.chkXlog.Caption("X-Log")
+Gui.Form_LogScaling.chkXlog.FontSize(18)
+Gui.FrmMaint..Create
+Gui.FrmMaint..Caption("Maintenance")
+Gui.FrmMaint..Size(8010,7425)
+Gui.FrmMaint..MinX(0)
+Gui.FrmMaint..MinY(0)
+Gui.FrmMaint..Position(0,0)
+Gui.FrmMaint..BackColor(-2147483633)
+Gui.FrmMaint..MaxButton(False)
+Gui.FrmMaint..MinButton(False)
+Gui.FrmMaint..MousePointer(0)
+Gui.FrmMaint..Event(UnLoad,FrmMaint_UnLoad)
+Gui.FrmMaint.cmdSaveMaint.Create(Button)
+Gui.FrmMaint.cmdSaveMaint.Size(960,375)
+Gui.FrmMaint.cmdSaveMaint.Position(210,6285)
+Gui.FrmMaint.cmdSaveMaint.Caption("&Save")
+Gui.FrmMaint.cmdSaveMaint.Event(Click,cmdSaveMaint_Click)
+Gui.FrmMaint.GsGrid.Create(GsGridControl)
+Gui.FrmMaint.GsGrid.Size(6390,5295)
+Gui.FrmMaint.GsGrid.Position(180,825)
+Gui.FrmMaint.GsGrid.Event(RowCellClick,GsGrid_RowCellClick)
+Gui.FrmMaint.lblType.Create(Label,"Type",True,1050,255,0,240,150,True,0,"Arial",8,-2147483633,0)
+Gui.FrmMaint.lbl1name1.Create(Label,"Label",True,1935,255,0,1440,120,True,0,"Arial",8,-2147483633,0)
+Gui.FrmMaint.LblName2.Create(Label,"Name",False,1935,255,0,4020,120,True,0,"Arial",8,-2147483633,0)
+Gui.FrmMaint.ddlType.Create(DropDownList)
+Gui.FrmMaint.ddlType.Size(1095,330)
+Gui.FrmMaint.ddlType.Position(240,390)
+Gui.FrmMaint.ddlType.Event(Click,ddlType_Click)
+Gui.FrmMaint.txtname1.Create(TextBox,"",True,2490,300,0,1410,405,True,0,"Arial",8,-2147483643,1)
+Gui.FrmMaint.txtname1.MaxLength(30)
+Gui.FrmMaint.txtname1.Event(KeyPressEnter,txtname1_KeyPressEnter)
+Gui.FrmMaint.txtname2.Create(TextBox,"",False,2490,300,0,4050,405,True,0,"Arial",8,-2147483643,1)
+Gui.FrmMaint.txtname2.MaxLength(30)
+Gui.FrmMaint.txtname2.Event(KeyPressEnter,txtname2_KeyPressEnter)
+Gui.FrmMaint.cmdAdd.Create(Button)
+Gui.FrmMaint.cmdAdd.Size(540,375)
+Gui.FrmMaint.cmdAdd.Position(6645,360)
+Gui.FrmMaint.cmdAdd.Caption("Add")
+Gui.FrmMaint.cmdAdd.Event(Click,cmdAdd_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sControl.Declare(String)
+v.Global.sTempVal.Declare(String)
+v.Global.sTempValP.Declare(String)
+Program.External.Include.Library("6016.lib")
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Global.bSave.Declare(Boolean)
+V.Local.sRet.Declare(String)
+V.Local.sSql.Declare(String)
+'V.Global.lNextLot.Declare(long)
+'V.Global.lLotstart.Declare(long)
+v.Global.iRow.Declare(long,-1)
+
+'load dropdownlists and default values.
+'f.Intrinsic.Control.CallSub(loadscreen)
+
+
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,10000)
+f.Intrinsic.Control.If(v.Caller.Hook,<>,47565)
+	f.Intrinsic.Control.CallSub(loadmaint)
+	F.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf 
+
+f.Intrinsic.Control.CallSub(addprinter)
+
+'---===========================================================================
+ 'Auto Number Lots in Receipts and WIP to FG - Company options Advanced - Inventory
+'---===========================================================================
+
+f.ODBC.Connection!con.Execute("Delete from GCG_4887_LogTally")
+
+f.Intrinsic.Control.If(Variable.Passed.000104.Trim,<>,"")
+	'PO
+	f.Intrinsic.String.LPad(Variable.Passed.000104,"0",7,V.Local.sRet)
+	f.Intrinsic.String.Build("select top 1 RELEASE_NO from v_PO_BLANKET  where BLNK_NO = '{0}'  order by RELEASE_NO DESC  ",V.Local.sRet,V.Local.sSql)
+	F.ODBC.Connection!con.OpenRecordsetRO("rstB",V.local.ssql)
+	f.Intrinsic.Control.if(V.ODBC.con!rstB.EOF,=,False)
+		gui.Form_LogScaling.txtPO.text(v.ODBC.con!rstB.FieldVal!RELEASE_NO)
+		f.Intrinsic.Control.CallSub(txtpo_keypressenter)
+	f.Intrinsic.Control.EndIf 
+	f.ODBC.con!rstB.Close
+	f.Intrinsic.String.Build("{0}{1}","Blanket PO : ",V.Local.sRet,V.Local.sRet)
+	gui.Form_LogScaling.lblBPO.Caption(V.Local.sRet)
+	'Vendor name
+	V.Local.sRet.Set(Variable.Passed.000109)
+	f.Intrinsic.String.Build("{0}{1}","Vendor Name : ",V.Local.sRet,V.Local.sRet)
+	gui.Form_LogScaling.lblVendor.Caption(V.Local.sRet)
+f.Intrinsic.Control.EndIf 	
+
+'show screen
+
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+gui.Form_LogScaling..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Main.End
+
+Program.Sub.Form_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Form_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+'end program
+
+
+f.Intrinsic.Control.CallSub(clear)
+F.ODBC.Connection!con.Close
+f.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Form_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.LoadScreen.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'add values to dropdownlists.
+
+'species
+gui.Form_LogScaling.ddlSortCode.additem("RED OAK")
+gui.Form_LogScaling.ddlSortCode.AddItem("CEDAR")
+gui.Form_LogScaling.ddlSortCode.AddItem("CHERRY")
+
+'Lengths
+gui.Form_LogScaling.ddlLength.AddItem("8'")
+gui.Form_LogScaling.ddlLength.AddItem("10'")
+gui.Form_LogScaling.ddlLength.AddItem("12'")
+gui.Form_LogScaling.ddlLength.AddItem("14'")
+gui.Form_LogScaling.ddlLength.AddItem("16'")
+
+''load sample data to screen
+'f.Data.DataTable.Create("LogTally",True)
+'f.Data.DataTable.AddColumn("LogTally","Line","String")
+'f.Data.DataTable.AddColumn("LogTally","Part","String")
+'f.Data.DataTable.AddColumn("LogTally","Length","String")
+'f.Data.DataTable.AddColumn("LogTally","Diam.","String")
+'f.Data.DataTable.AddColumn("LogTally","Grade","String")
+'f.Data.DataTable.AddColumn("LogTally","Feet","String")
+
+f.Data.DataTable.CreateFromString("LogTally","001*!*REDOAK023*!*12*!*18*!*A01*!*147@!@001*!*REDOAK023*!*8*!*18*!*A01*!*98@!@002*!*CEDAR012*!*10*!*10*!*A01*!*22.5","Line*!*Part*!*Length*!*Diam.*!*Grade*!*Feet","String*!*String*!*String*!*String*!*String*!*String","*!*","@!@",true)
+
+'gui.Form_LogScaling.GsGc_LogTally.AddGridviewFromDatatable("LogTally","LogTally")
+gui.Form_LogScaling.GsGc_LogTally.DataSource("LogTally")
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.LoadScreen.End
+
+Program.Sub.cmd_Cancel_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_Cancel_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+	f.Intrinsic.Control.CallSub(clear)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_Cancel_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_Cancel_Click.End
+
+Program.Sub.cmd_Save_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_Save_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.BlockEvents 
+
+v.Local.sClmnlist.Declare 
+v.Local.sRet.Declare
+v.Local.sSql.Declare
+
+
+
+	F.Intrinsic.Control.If(V.DataTable.DTGrid.Exists,=,True)
+
+		'update PO Lines User Fields
+		v.Local.sClmnlist.Set("Line")
+		f.Data.DataView.Create("DTGrid","DVExport")
+		Function.Data.DataView.ToDataTableDistinct("DTGrid","DVExport","DTExport",v.Local.sClmnlist)
+		Function.Data.DataTable.AddColumn("DTExport","logger","string",v.Screen.Form_LogScaling!ddlLogger.Text)
+		Function.Data.DataTable.AddColumn("DTExport","truckcpmy","string",v.Screen.Form_LogScaling!ddlHCmpy.Text)
+		Function.Data.DataTable.AddColumn("DTExport","driver","string",v.Screen.Form_LogScaling!ddlDriver.Text)
+		Function.Data.DataTable.AddColumn("DTExport","PO","string",v.Screen.Form_LogScaling!txtPO.text)
+
+		f.Data.DataTable.AddExpressionColumn("DTExport","Lno","string","[Line] + '0'")
+
+		F.Data.DataTable.SaveToDB("DTExport","con","po_lines","PO*!*Lno",256,"PO@!@purchase_order*!*Lno@!@record_no*!*logger@!@user_3*!*truckcpmy@!@user_4*!*driver@!@user_5")	
+		f.Data.DataView.Close("DTGrid","DVExport")
+		f.Data.DataTable.Close("DTExport")
+
+
+		f.Data.DataView.Create("DTGrid","DVExport")
+
+		v.Local.sClmnlist.Set("Line*!*Part*!*HEAT*!*Lot*!*Price*!*LineSeq*!*Qty*!*User2*!*User3")
+		Function.Data.DataView.ToDataTableDistinct("DTGrid","DVExport","DTExport",v.Local.sClmnlist)
+
+		f.Data.DataTable.Merge("DTExport","6016",False,2)
+
+		f.Intrinsic.String.Format(v.Ambient.Date,"yymmdd",v.Local.sRet)
+
+
+		f.Data.DataTable.SetValue("6016",-1,"PO",v.Screen.Form_LogScaling!txtPO.Text)
+		f.Data.DataTable.SetValue("6016",-1,"RcvdDate",v.Local.sRet)
+		v.Local.sRet.Set(v.Caller.User)
+		f.Data.DataTable.SetValue("6016",-1,"Receiver",v.Local.sRet.Left6)
+		f.Data.DataTable.SetValue("6016",-1,"Closed","Y")
+
+		F.Intrinsic.Control.CallSub(6016Sync)
+
+		V.Global.bSave.Set(False)
+
+		f.Intrinsic.Control.CallSub(printreport,"PO",v.Screen.Form_LogScaling!txtPO.Text)
+
+		f.Intrinsic.Control.CallSub(form_unload)
+'		f.Intrinsic.Control.CallSub(clear)
+	f.Intrinsic.Control.EndIf 
+
+f.Intrinsic.Control.UNBlockEvents 
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_Save_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.UNBlockEvents 
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_Save_Click.End
+
+Program.Sub.cmd_AddLog_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_AddLog_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+
+v.Local.sRet.Declare 
+v.Local.sGrade.Declare 
+v.Local.sLot.Declare 
+v.Local.fLen.Declare 
+v.Local.fDiam.Declare 
+v.Local.FRet.Declare 
+v.Local.lCRow.Declare 
+V.local.lNextLot.Declare 
+v.Local.sSql.Declare 
+v.Local.sHeat.Declare 
+
+
+'f.Data.DataTable.CreateFromString("LogTally","001*!*REDOAK023*!*12*!*18*!*A01*!*147@!@001*!*REDOAK023*!*8*!*18*!*A01*!*98@!@002*!*CEDAR012*!*10*!*10*!*A01*!*22.5","Line*!*Part*!*Length*!*Diam.*!*Grade*!*Feet","String*!*String*!*String*!*String*!*String*!*String","*!*","@!@",true)
+'
+'gui.Form_LogScaling.GsGc_LogTally.DataSource("LogTally")
+'you
+
+
+
+v.Local.fDiam.Set(V.Screen.Form_LogScaling!txtDiam.text)
+v.Local.fLen.Set(V.Screen.Form_LogScaling!txtLength.text)
+v.Local.sGrade.Set(V.Screen.Form_LogScaling!txtGrade.text)
+
+f.Intrinsic.Math.Add(Variable.DataTable.DTGrid.rowcount,1,v.Local.lCRow)
+'f.Intrinsic.String.Build("{0}-{1}",V.Screen.Form_LogScaling!txtPO.text,v.Local.lCRow,v.Local.sLot)
+
+
+
+f.Intrinsic.Control.If(v.Screen.Form_LogScaling!ddlSortCode.text,=,"")
+	f.Intrinsic.UI.Msgbox("Please select Logger")
+	gui.Form_LogScaling.ddlSortCode.SetFocus 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.endIf
+
+f.Intrinsic.Control.If(v.Screen.Form_LogScaling!ddlLogger.text,=,"")
+	f.Intrinsic.UI.Msgbox("Please select Logger")
+	gui.Form_LogScaling.ddlLogger.SetFocus 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.endIf
+
+f.Intrinsic.Control.If(v.Screen.Form_LogScaling!ddlHCmpy.text,=,"")
+	f.Intrinsic.UI.Msgbox("Please select Hauling Company")
+	gui.Form_LogScaling.ddlHCmpy.SetFocus 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.endIf
+
+f.Intrinsic.Control.If(v.Screen.Form_LogScaling!ddlDriver.text,=,"")
+	f.Intrinsic.UI.Msgbox("Please select Driver")
+	gui.Form_LogScaling.ddlDriver.SetFocus 
+	f.Intrinsic.Control.ExitSub 
+f.Intrinsic.Control.endIf
+
+F.Intrinsic.UI.InvokeWaitDialog("Printing Label...","Printing Label")
+gui.Form_LogScaling..Enabled(False)
+
+gui.Form_LogScaling.ddlLogger.Enabled(false)
+gui.Form_LogScaling.ddlHCmpy.Enabled(false)
+gui.Form_LogScaling.ddlDriver.Enabled(false)
+
+'f.Intrinsic.Control.If(v.Screen.Form_LogScaling!ddlPrinter.text,=,"")
+'	f.Intrinsic.UI.Msgbox("Please select Label printer")
+'	gui.Form_LogScaling.ddlPrinter.SetFocus 
+'	f.Intrinsic.Control.ExitSub 
+'f.Intrinsic.Control.endIf
+
+f.Intrinsic.Control.If(v.Local.fDiam,>,0)
+f.Intrinsic.Control.andIf(v.Local.fLen,>,0)
+f.Intrinsic.Control.andIf(v.Local.sGrade.trim,<>,0)
+f.Intrinsic.Control.andIf(v.Local.sGrade.trim,<>,"")
+	f.Intrinsic.String.Split(v.Screen.Form_LogScaling!lbl_Part.Caption,":",v.Local.sRet)
+	'QTY - Feet -  [L x (D - 4) x (D ? 4)] / 16
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+	f.Intrinsic.Control.If(v.Screen.Form_LogScaling!chkXlog.Value,=,1)
+		f.Intrinsic.String.Build("{0}-X",V.Screen.Form_LogScaling!txtGrade.text,v.Local.sHeat)
+	f.Intrinsic.Control.Else
+		v.Local.sHeat.Set(V.Screen.Form_LogScaling!txtGrade.text)
+	f.Intrinsic.Control.EndIf 
+
+	f.Intrinsic.Control.If(v.Global.iRow,=,-1)
+		f.Intrinsic.Control.CallSub(nextlotno)
+		f.Intrinsic.Math.Add(v.Args.NextLot,1,V.local.lNextLot)
+'		F.Data.DataTable.AddRow("DTGrid", "Line",v.Local.sRet(0), "Part",v.Local.sRet(1),"Length",V.Screen.Form_LogScaling!txtLength.text,"Diam",V.Screen.Form_LogScaling!txtDiam.text,"Heat",V.Screen.Form_LogScaling!txtGrade.text,"Price",V.Screen.Form_LogScaling!lblcost.Caption,"Lot",V.local.lNextLot,"LineSeq",v.Local.lCRow,"Partdesc",v.Screen.Form_LogScaling!ddlSortCode.text)
+
+		F.Data.DataTable.AddRow("DTGrid", "Line",v.Local.sRet(0), "Part",v.Local.sRet(1),"Length",V.Screen.Form_LogScaling!txtLength.text,"Diam",V.Screen.Form_LogScaling!txtDiam.text,"Heat",v.Local.sHeat,"Price",V.Screen.Form_LogScaling!lblcost.Caption,"Lot",V.local.lNextLot,"LineSeq",v.Local.lCRow,"Partdesc",v.Screen.Form_LogScaling!ddlSortCode.text,"User2",V.Screen.Form_LogScaling!txtLength.text,"User3",V.Screen.Form_LogScaling!txtDiam.text)
+
+		'new line
+		gui.Form_LogScaling.txtTotalLogs.Text(Variable.DataTable.DTGrid.rowcount)
+		f.Intrinsic.Math.Sub(Variable.DataTable.DTGrid.rowcount,1,v.Local.lCRow)
+		gui.Form_LogScaling.GsGc_LogTally.SetRowAppearance("DVGrid",v.Local.lCRow,"Fontbold","True")
+		gui.Form_LogScaling.GsGc_LogTally.SetRowAppearance("DVGrid",v.Local.lCRow,"Fontsize","10")
+		Function.Data.DataTable.SetValueFormat("DTGrid",-1,"LineSeq","LineSeq","0000")
+
+		f.Intrinsic.String.Build("update OP_HEADER set F_LONG = {0} where ID='400561' AND SEQUENCE = '0001'",V.local.lNextLot,v.Local.sSql)
+		f.ODBC.Connection!con.Execute(v.Local.sSql)
+
+	f.Intrinsic.Control.Else
+		F.Data.DataTable.SetValue("DTGrid",v.Global.iRow,"Line",v.Local.sRet(0), "Part",v.Local.sRet(1),"Length",V.Screen.Form_LogScaling!txtLength.text,"Diam",V.Screen.Form_LogScaling!txtDiam.text,"Heat",v.Local.sHeat,"Price",V.Screen.Form_LogScaling!lblcost.Caption,"Lot",v.Screen.Form_LogScaling!lblLOT.Caption,"Partdesc",v.Screen.Form_LogScaling!ddlSortCode.text)
+		v.Global.iRow.Set(-1)
+		gui.Form_LogScaling.lblLOT.Caption("")
+		gui.Form_LogScaling.cmdclear.Visible(False)
+	f.Intrinsic.Control.EndIf 
+
+	f.Data.DataTable.Compute("DTGrid","sum(Qty)","",v.Local.FRet)
+	f.Intrinsic.String.Format(v.Local.FRet,"####.00",v.Local.sRet)
+	gui.Form_LogScaling.txtTotalBoardFeet.Text(v.Local.sRet)
+
+
+	V.Global.bSave.Set(True)
+
+	f.Intrinsic.Control.CallSub(printlabel)	
+
+	gui.Form_LogScaling.txtLength.Text(0)
+	gui.Form_LogScaling.txtDiam.Text(0)
+	gui.Form_LogScaling.txtGrade.Text(0)
+
+F.Intrinsic.Debug.Stop
+
+	gui.Form_LogScaling.chkXlog.Value(0)
+f.Intrinsic.Control.endIf
+
+f.Intrinsic.UI.CloseWaitDialog
+gui.Form_LogScaling..Enabled(True)
+gui.Form_LogScaling.txtLength.SetFocus 
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_AddLog_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_AddLog_Click.End
+
+Program.Sub.cmd_TxtPO_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_TxtPO_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+v.Local.sret.Declare(string)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sSql.Declare(String)
+
+'Function.Intrinsic.UI.Browser(4000, "", Variable.Local.sRet)
+'f.Intrinsic.Control.If(v.Local.sret,<>,"***CANCEL***")
+'
+'	f.Intrinsic.String.Split(v.Local.sret,"*!*",v.Local.sret)
+'	gui.Form_LogScaling.txtPO.Text(v.Local.sret(0).trim)
+'	f.Intrinsic.Control.CallSub(txtpo_keypressenter)
+'f.Intrinsic.Control.EndIf
+'
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+''
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.String.Split("Purchase order*!*Vendor*!*Vendor Name","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("800*!*800*!*1200","*!*",V.Local.iWidths)
+
+f.Intrinsic.String.Build("select distinct Purchase_order,LN.Vendor,name_Vendor from PO_LINES LN left join v_vendor_master vMast on LN.vendor = vMast.vendor where Flag_Rec_Type = 'L' and Qty_order > Qty_Received and Flag_Recv_close  <> 'Y' and Flag_Rec_Type = 'L' ORDER BY Purchase_order","",V.Local.sSql)
+F.Intrinsic.UI.Browser("Select Purchase order","con",V.Local.sSql,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.UI.Msgbox("No PO was selected")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	gui.Form_LogScaling.txtPO.Text(v.Local.sret(0).trim)
+	f.Intrinsic.String.Build("{0}{1}","Vendor Name : ",V.Local.sRet(2),V.Local.sRet)
+	gui.Form_LogScaling.lblVendor.Caption(V.Local.sRet)
+	f.Intrinsic.Control.CallSub(txtpo_keypressenter)
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_TxtPO_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_Log_Tally_Mockup.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_TxtPO_Click.End
+
+Program.Sub.ddlSortCode_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+'f.Intrinsic.Control.If(v.Screen.Form_LogScaling!ddlSortCode.Value,=,"RED OAK")
+'	gui.Form_LogScaling.lbl_Part.Caption("001:REDOAK023")
+'	
+'f.Intrinsic.Control.ElseIf(v.Screen.Form_LogScaling!ddlSortCode.Value,=,"CEDAR")
+'	gui.Form_LogScaling.lbl_Part.Caption("002:CEDAR012")
+'
+'f.Intrinsic.Control.Else
+'	gui.Form_LogScaling.lbl_Part.Caption("003:CHERRY321")
+'f.Intrinsic.Control.EndIf
+
+'Function.Data.Dictionary.ReturnKeyFromValue("Draw_Dict",V.Local.sTxt.UCase,V.Local.sRet)
+
+Function.Data.Dictionary.ReturnKeyFromValue("DICPO",v.Screen.Form_LogScaling!ddlSortCode.text,V.Local.sRet)
+
+f.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+gui.Form_LogScaling.lblcost.Caption(V.Local.sRet(2))
+
+f.Intrinsic.String.Build("{0}:{1}",V.Local.sRet(0),V.Local.sRet(1),V.Local.sRet)
+
+gui.Form_LogScaling.lbl_Part.Caption(V.Local.sRet)
+gui.Form_LogScaling.txtLength.SetFocus 
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.ddlSortCode_Click.End
+
+Program.Sub.cmdPrev_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdPrev_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+'only control focus of three variables that require data entry
+f.Intrinsic.Control.SelectCase(v.Global.sControl)
+f.Intrinsic.Control.Case("TXTLENGTH")
+	gui.Form_LogScaling.txtGrade.SetFocus
+f.Intrinsic.Control.Case("TXTDIAM")
+	gui.Form_LogScaling.txtLength.SetFocus
+f.Intrinsic.Control.Case("TXTGRADE")
+	gui.Form_LogScaling.txtDiam.SetFocus
+f.Intrinsic.Control.CaseElse
+	gui.Form_LogScaling.txtGrade.SetFocus
+f.Intrinsic.Control.EndSelect
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdPrev_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdPrev_Click.End
+
+Program.Sub.cmdNext_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdNext_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+'only control focus of three variables that require data entry
+f.Intrinsic.Control.SelectCase(v.Global.sControl)
+f.Intrinsic.Control.Case("TXTLENGTH")
+	gui.Form_LogScaling.txtDiam.SetFocus
+f.Intrinsic.Control.Case("TXTDIAM")
+	gui.Form_LogScaling.txtGrade.SetFocus
+f.Intrinsic.Control.Case("TXTGRADE")
+	gui.Form_LogScaling.txtLength.SetFocus
+f.Intrinsic.Control.CaseElse
+	gui.Form_LogScaling.txtLength.SetFocus
+f.Intrinsic.Control.EndSelect
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdNext_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdNext_Click.End
+
+Program.Sub.cmdPClick.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.bCheck.Declare(Boolean)
+v.Local.stemp.Declare(String)
+v.Local.stemp2.Declare(String)
+
+'we have to keep track of the decimal because we are using an embedded keyboard
+f.Intrinsic.String.IsInString(v.Global.sTempVal,".",True,v.Local.bCheck)
+
+f.Intrinsic.Control.If(v.Local.bCheck,=,True)
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.Else
+	v.Global.sTempValP.Set(".")
+f.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdPClick.End
+
+Program.Sub.cmdNumber_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.iVal.Declare(Long)
+v.Local.sKey.Declare(String)
+v.Local.sVal.Declare(String)
+
+v.Local.sKey.Set(v.Args.controlname)
+
+
+f.Intrinsic.Control.If(v.Global.sControl.Trim,=,"")
+	gui.Form_LogScaling.txtLength.SetFocus
+	f.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.String.Right(v.Local.sKey,1,v.Local.sKey)
+
+'if decimal has been entered before this value it will grab it and append.
+f.Intrinsic.Control.If(v.Global.sTempValP.Trim,<>,"")
+
+	f.Intrinsic.String.Build("{0}.{1}",v.Screen.Form_LogScaling![v.Global.sControl].text,v.Local.sKey,v.Local.sVal)
+	v.Global.sTempValP.Set("")
+
+f.Intrinsic.Control.Else
+	'if no decimal entered, keep appending numbers as normal.
+	f.Intrinsic.String.Build("{0}{1}",v.Screen.Form_LogScaling![v.Global.sControl].text,v.Local.sKey,v.Local.sVal)
+
+f.Intrinsic.Control.EndIf
+
+	gui.Form_LogScaling.[v.Global.sControl].Text(v.Local.sVal.Float)	
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.cmdNumber_Click.End
+
+Program.Sub.txtLength_Click.Start
+Program.Sub.txtLength_Click.End
+
+Program.Sub.txtDiam_Click.Start
+Program.Sub.txtDiam_Click.End
+
+Program.Sub.txtGrade_Click.Start
+Program.Sub.txtGrade_Click.End
+
+Program.Sub.txtLength_GotFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtLength_GotFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'f.Intrinsic.UI.Msgbox(Variable.Args.controlname)
+
+'f.Intrinsic.Debug.SetLA(v.Args.controlname)
+v.Global.sControl.Set(v.Args.controlname)
+
+'gui.Form_LogScaling.txtLength.BackColor(v.Color.White)
+'gui.Form_LogScaling.txtDiam.BackColor(v.Color.White)
+'gui.Form_LogScaling.txtGrade.BackColor(v.Color.White)
+
+'color selected txtbox
+'gui.Form_LogScaling.[v.Args.controlname].BackColor(v.Color.Yellow)
+'gui.Form_LogScaling.[v.Args.controlname].text("0")
+'gui.Form_LogScaling.[v.args.controlname].selectall
+
+'gui.Form_LogScaling.txtLength.BackColor(v.Color.Yellow)
+'gui.Form_LogScaling.txtLength.text("0")
+'gui.Form_LogScaling.txtLength.selectall
+
+
+
+'track current value of selected variable
+'v.Global.sTempVal.Set(v.Screen.Form_LogScaling![v.Args.controlname].Text)
+
+
+gui.Form_LogScaling.txtLength.BackColor(v.Color.Yellow)
+gui.Form_LogScaling.txtDiam.BackColor(v.Color.White)
+gui.Form_LogScaling.txtGrade.BackColor(v.Color.White)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtLength_GotFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtLength_GotFocus.End
+
+Program.Sub.txtDiam_GotFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtDiam_GotFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+gui.Form_LogScaling.txtDiam.BackColor(v.Color.Yellow)
+gui.Form_LogScaling.txtLength.BackColor(v.Color.White)
+gui.Form_LogScaling.txtGrade.BackColor(v.Color.White)
+
+'gui.Form_LogScaling.txtDiam.text("0")
+'gui.Form_LogScaling.txtDiam.selectall
+
+'f.Intrinsic.UI.Msgbox(Variable.Args.controlname)
+
+
+v.Global.sControl.Set(v.Args.controlname)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtDiam_GotFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtDiam_GotFocus.End
+
+Program.Sub.txtGrade_GotFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtGrade_GotFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+v.Global.sControl.Set(v.Args.controlname)
+
+gui.Form_LogScaling.txtGrade.BackColor(v.Color.Yellow)
+gui.Form_LogScaling.txtLength.BackColor(v.Color.White)
+gui.Form_LogScaling.txtDiam.BackColor(v.Color.White)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtGrade_GotFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtGrade_GotFocus.End
+
+Program.Sub.txtLength_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtLength_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+gui.Form_LogScaling.txtLength.BackColor(v.Color.White)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtLength_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtLength_LostFocus.End
+
+Program.Sub.txtDiam_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtDiam_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+gui.Form_LogScaling.txtDiam.BackColor(v.Color.White)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtDiam_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtDiam_LostFocus.End
+
+Program.Sub.txtPO_KeyPressEnter.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_Cancel_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+v.Local.bRet.Declare
+v.Local.sRet.Declare
+
+'Create DataTable
+'Create Dictionary
+
+
+
+F.Intrinsic.Control.If(V.DataTable.DTGrid.Exists,=,True)
+	v.Local.sRet.Set(v.Screen.Form_LogScaling!txtPO.Text)
+	f.Intrinsic.Control.CallSub(clear)
+	gui.Form_LogScaling.txtPO.Text(v.Local.sRet)
+f.Intrinsic.Control.EndIf 
+
+'f.Intrinsic.String.Build("select Purchase_order,Record_no,Part,description,vendor  from v_PO_LINES where Flag_Recv_close <> 'Y' and Qty_Received < Qty_order and Purchase_order = '{0}'",v.Screen.Form_LogScaling!txtPO.text,V.Local.sSQL)
+
+'f.Intrinsic.String.Build("select Purchase_order,Record_no,Part,description,vendor  from v_PO_LINES where Purchase_order = '{0}'",v.Screen.Form_LogScaling!txtPO.text,V.Local.sSQL)
+
+'alternate syntax concat(cost,'*!*') as Record_no
+f.Intrinsic.String.Build("select left(Record_no,3) + '*!*' + Part + '*!*' + convert(Cost,SQL_CHAR) as Record_no,description,vendor  from v_PO_LINES where Purchase_order = '{0}'",v.Screen.Form_LogScaling!txtPO.text,V.Local.sSQL)
+'f.Data.DataTable.CreateFromSQL("DTPO","CON",v.Local.ssql,true)
+
+
+
+'Function.Data.Dictionary.CreateFromDataTable("DICPO","DTPO","Record_no","description")
+
+Function.Data.Dictionary.CreateFromSQL("DICPO","Con",v.Local.ssql)
+F.Data.Dictionary.SetDefaultReturn("DICPO", "")
+
+gui.Form_LogScaling.ddlSortCode.ClearItems
+
+gui.Form_LogScaling.ddlSortCode.AddItems("Dictionary","DICPO")
+
+
+
+f.Data.DataTable.Create("DTLabel","True")
+f.Data.DataTable.AddColumn("DTLabel","Line","String")
+f.Data.DataTable.AddColumn("DTLabel","Part","String")
+f.Data.DataTable.AddColumn("DTLabel","Partdesc","String")
+f.Data.DataTable.AddColumn("DTLabel","Length","Float")
+f.Data.DataTable.AddColumn("DTLabel","Diam","Float")
+f.Data.DataTable.AddColumn("DTLabel","Grade","string")
+f.Data.DataTable.AddColumn("DTLabel","Lot","String")
+f.Data.DataTable.AddColumn("DTLabel","Price","Float")
+f.Data.DataTable.AddColumn("DTLabel","Feet","Float")
+f.Data.DataTable.AddColumn("DTLabel","BPO","String")
+f.Data.DataTable.AddColumn("DTLabel","PO","String")
+f.Data.DataTable.AddColumn("DTLabel","Vendor","String")
+f.Data.DataTable.AddColumn("DTLabel","HCMpy","String")
+f.Data.DataTable.AddColumn("DTLabel","HName","String")
+f.Data.DataTable.AddColumn("DTLabel","Logger","String")
+
+F.Data.DataTable.AddRow("DTLabel", "Line","", "Part","","Partdesc","","Length",0,"Diam",0,"Grade",0,"Price",0,"Lot","","Feet",0,"BPO","","PO","","Vendor","","HCMpy","","HName","","Logger","")	
+
+f.Data.DataTable.Create("DTGrid","True")
+f.Data.DataTable.AddColumn("DTGrid","Line","String")
+f.Data.DataTable.AddColumn("DTGrid","Part","String")
+f.Data.DataTable.AddColumn("DTGrid","Length","Float")
+f.Data.DataTable.AddColumn("DTGrid","Diam","Float")
+f.Data.DataTable.AddColumn("DTGrid","HEAT","string")
+f.Data.DataTable.AddColumn("DTGrid","Lot","String")
+f.Data.DataTable.AddColumn("DTGrid","Price","Float")
+f.Data.DataTable.AddColumn("DTGrid","LineSeq","String")
+f.Data.DataTable.AddColumn("DTGrid","Partdesc","String")
+f.Data.DataTable.AddColumn("DTGrid","User2","String")
+f.Data.DataTable.AddColumn("DTGrid","User3","String")
+
+
+f.Data.DataTable.AddExpressionColumn("DTGrid","Qty","Float","Length*(Diam-4)*(Diam -4)/16")
+
+
+
+'gui.Form_LogScaling.GsGc_LogTally.DataSource("DTGrid")
+
+
+F.Data.DataView.Create("DTGrid","DVGrid")
+
+
+gui.Form_LogScaling.GsGc_LogTally.AddGridViewFromDataTable("DVGrid","DTGrid")
+
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Line","HeaderFontBold","True")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Part","HeaderFontBold","True")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Length","HeaderFontBold","True")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Diam","HeaderFontBold","True")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","HEAT","HeaderFontBold","True")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Qty","HeaderFontBold","True")
+
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid", "LOT", "Visible", False)
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid", "Price", "Visible", False)
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid", "LineSeq", "Visible", False)
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid", "Partdesc", "Visible", False)
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid", "User2", "Visible", False)
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid", "User3", "Visible", False)
+
+gui.Form_LogScaling.GsGc_LogTally.SetGridViewProperty("DVGrid","AllowColumnMoving",False)
+gui.Form_LogScaling.GsGc_LogTally.SetGridViewProperty("DVGrid","OptionBehaviorEditable",False)
+'gui.Form_LogScaling.GsGc_LogTally.SetGridViewProperty("DVGrid", "ColumnPanelRowHeight", "80")
+gui.Form_LogScaling.GsGc_LogTally.SetGridViewProperty("DVGrid", "Enableappearanceevenrow", "True")
+
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","HEAT","Caption","Grade")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Qty","Caption","Feet")
+
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Line","MinWidth","40")	
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Part","MinWidth","100")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Length","MinWidth","50")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Diam","MinWidth","50")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","HEAT","MinWidth","50")
+gui.Form_LogScaling.GsGc_LogTally.SetColumnProperty("DVGrid","Qty","MinWidth","100")
+
+'Function.Data.DataTable.SetValueFormat("DTGrid",-1,"Qty","Qty","####.00")
+'Function.Data.DataTable.SetValueFormat("DTGrid",-1,"LOT","LOT","0000")
+'
+'Function.Data.DataTable.SetValue("DTGrid",-1,"LOT","LineNO")
+'
+'Function.Data.DataTable.SetValueFormat("DTGrid",-1,"LOT","LOT","0000")
+
+gui.Form_LogScaling.GsGc_LogTally.MainView("DVGrid")
+
+
+gui.Form_LogScaling.txtLength.SetFocus 
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_Cancel_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_Log_Tally_Mockup.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtPO_KeyPressEnter.End
+
+Program.Sub.AddPrinter.Start
+F.Intrinsic.Control.SetErrorHandler("AddPrinter_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.sSql.Declare 
+
+
+
+	Function.ODBC.Connection!conx.openConnection(variable.Ambient.Ccon, Variable.Ambient.Cuser, Variable.Ambient.Cpass)
+	V.Local.sSql.Set("Select SentinelAlias,SentinelAlias from SERVER_PRINTERS where SentinelEnabled = 1 ")
+	f.Data.Dictionary.CreateFromSQL("DICPR","conx",V.Local.sSql)
+	F.Data.Dictionary.SetDefaultReturn("DICPR", "")
+	gui.Form_LogScaling.ddlPrinter.AddItems("Dictionary","DICPR")
+	f.Data.Dictionary.Close("DICPR")
+
+	f.ODBC.Connection!conx.Close 
+
+
+	V.Local.sSql.Set("select distinct M_Name,M_Name from gcg_4887_Maintenance where M_Type = 'L' ")
+	f.Data.Dictionary.CreateFromSQL("DICPR","con",V.Local.sSql)
+	F.Data.Dictionary.SetDefaultReturn("DICPR", "")
+	gui.Form_LogScaling.ddlLogger.AddItems("Dictionary","DICPR")
+	f.Data.Dictionary.Close("DICPR")
+
+'	
+	V.Local.sSql.Set("select distinct M_Hauling_CO,M_Hauling_CO from gcg_4887_Maintenance where M_Type = 'D' ")
+	f.Data.Dictionary.CreateFromSQL("DICPR","con",V.Local.sSql)
+	F.Data.Dictionary.SetDefaultReturn("DICPR", "")
+	gui.Form_LogScaling.ddlHCmpy.AddItems("Dictionary","DICPR")
+	f.Data.Dictionary.Close("DICPR")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("AddPrinter_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.AddPrinter.End
+
+Program.Sub.Clear.Start
+F.Intrinsic.Control.SetErrorHandler("Clear_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+variable.local.returnvalue.Declare(long)
+
+
+	F.Intrinsic.Control.If(V.Global.bSave,=,True)
+		Function.Intrinsic.UI.MsgBox("Changes not saved, Do you want to save the changes ?", "Confirm", 4, variable.local.returnvalue)
+		F.Intrinsic.Control.If(variable.local.returnvalue,=,6)
+			f.Intrinsic.Control.CallSub(cmd_save_click)
+		f.Intrinsic.Control.EndIf 
+	f.Intrinsic.Control.EndIf 
+
+	F.Intrinsic.Control.If(V.DataTable.DTGrid.Exists,=,True)
+		Function.Data.Dictionary.Close("DICPO")
+'		Function.Data.DataTable.Close("DTPO")
+		Function.Data.DataView.Close("DTGrid","DVGrid")
+		Function.Data.DataTable.Close("DTGrid")
+		Function.Data.DataTable.Close("DTLabel")
+	f.Intrinsic.Control.EndIf 
+
+	gui.Form_LogScaling.txtLength.Text(0)
+	gui.Form_LogScaling.txtDiam.Text(0)
+
+F.Intrinsic.Debug.Stop
+
+	gui.Form_LogScaling.txtGrade.Text(0)
+	gui.Form_LogScaling.chkXlog.Value(0)
+	gui.Form_LogScaling.ddlSortCode.ClearItems 
+	gui.Form_LogScaling.txtTotalBoardFeet.Text("")
+	gui.Form_LogScaling.txtTotalLogs.Text("")
+	gui.Form_LogScaling.txtPO.Text("")
+	gui.Form_LogScaling.lbl_Part.Caption("")
+	gui.Form_LogScaling.lblVendor.Caption("")
+	gui.Form_LogScaling.lblBPO.Caption("")
+
+	gui.Form_LogScaling.ddlLogger.Enabled(True)
+	gui.Form_LogScaling.ddlHCmpy.Enabled(True)
+	gui.Form_LogScaling.ddlDriver.Enabled(True)
+
+	F.Data.DataTable.CreateFromSQL("DTclear","con","Select '' as ' '")
+	gui.Form_LogScaling.GsGc_LogTally.AddGridviewFromDatatable("GV","DTclear")
+	gui.Form_LogScaling.GsGc_LogTally.MainView("GV")
+	f.Data.DataTable.Close("DTclear")
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Clear_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Clear.End
+
+Program.Sub.PrintLabel.Start
+F.Intrinsic.Control.SetErrorHandler("PrintLabel_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.lCRow.Declare 
+
+V.Local.iReportID.Declare(Long)
+V.Local.sRptID.Declare(String)
+V.Local.iBIRunID.Declare
+V.Local.iLogID.Declare
+V.Local.sRetBPO.Declare(String)
+V.Local.sRetVendor.Declare(String)
+v.Local.sHeat.Declare(String)
+
+f.Intrinsic.Math.sub(Variable.DataTable.DTGrid.rowcount,1,v.Local.lCRow)
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+f.Intrinsic.String.Split(V.Screen.Form_LogScaling!lblBPO.Caption,":",V.Local.sRetBPO)
+f.Intrinsic.Control.If(V.Local.sRetBPO(1),=,"OOB")
+	V.Local.sRetBPO.Set("")
+f.Intrinsic.Control.Else
+	V.Local.sRetBPO.Set(V.Local.sRetBPO(1))
+f.Intrinsic.Control.EndIf 
+f.Intrinsic.String.Split(V.Screen.Form_LogScaling!lblVendor.Caption,":",V.Local.sRetVendor)
+
+f.Intrinsic.Control.If(v.Screen.Form_LogScaling!chkXlog.Value,=,1)
+	f.Intrinsic.String.Build("{0}-X",V.Screen.Form_LogScaling!txtGrade.text,v.Local.sHeat)
+f.Intrinsic.Control.Else
+	v.Local.sHeat.Set(V.Screen.Form_LogScaling!txtGrade.text)
+f.Intrinsic.Control.EndIf 
+
+F.Data.DataTable.SetValue("DTLabel",0, "Line",Variable.DataTable.DTGrid(v.Local.lCRow).Line!FieldVal, "Part",Variable.DataTable.DTGrid(v.Local.lCRow).Part!FieldVal,"Partdesc",V.Screen.Form_LogScaling!ddlSortCode.text,"Length",V.Screen.Form_LogScaling!txtLength.text,"Diam",V.Screen.Form_LogScaling!txtDiam.text,"Grade",v.Local.sHeat,"Price",V.Screen.Form_LogScaling!lblcost.Caption,"Lot",Variable.DataTable.DTGrid(v.Local.lCRow).Lot!FieldVal,"Feet",Variable.DataTable.DTGrid(v.Local.lCRow).Qty!FieldVal,"BPO",V.Local.sRetBPO.Trim,"PO",V.Screen.Form_LogScaling!txtPO.text,"Vendor",V.Local.sRetVendor(1),"HCMpy",v.Screen.Form_LogScaling!ddlHCmpy.text,"HName",v.Screen.Form_LogScaling!ddlDriver.text,"Logger",v.Screen.Form_LogScaling!ddlLogger.text)	
+	F.Data.DataTable.SaveToDB("DTLabel","con","GCG_4887_LogTally","PO*!*Lot",256,"BPO@!@BPO*!*PO@!@PO*!*Line@!@Line*!*Part@!@Part*!*Partdesc@!@Partdesc*!*Length@!@Length*!*Diam@!@Diam*!*Grade@!@Grade*!*Lot@!@Lot*!*Vendor@!@Vendor*!*Feet@!@Feet*!*HCMpy@!@HCMpy*!*HName@!@HName*!*Logger@!@Logger")	
+
+	V.Local.sRptID.set("GCG_4887_LogTally.lab")
+
+	F.Global.BI.GetIDFromName(V.Local.sRptID,V.Local.sRptID)
+	F.Global.BI.GetRunID(V.Local.iBIRunID)
+	F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.sRptID,0,"",V.Local.iLogID)
+
+      'Stopping Logging
+    F.Global.BI.StopLogging(V.Local.iLogID)
+
+	F.Global.BI.PrintCodesoftLabelFromDataTable(V.Local.iBIRunID,V.Local.iLogID,"DTLabel",v.Screen.Form_LogScaling!ddlPrinter.Text,True)
+
+'	F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrintLabel_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.PrintLabel.End
+
+Program.Sub.NextLotno.Start
+F.Intrinsic.Control.SetErrorHandler("NextLotno_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'find last lot and write back last used to op header
+	'adv inventory option
+	F.ODBC.Connection!Con.OpenRecordsetRO("rstopheader","select ID,F_LONG from OP_HEADER where ID='400561' AND SEQUENCE = '0001'")
+	'adv purchasing option
+	'F.ODBC.Connection!Conx.OpenRecordsetRW("rstopheader","select ID,F_LONG from OP_HEADER where ID='401895' AND SEQUENCE = '0002'")
+	F.Intrinsic.Control.If(V.ODBC.Con!rstopheader.EOF,=,False)
+		Function.Intrinsic.Variable.AddRV ("NEXTLOT",V.ODBC.Con!rstopheader.FieldValTrim!F_LONG) 
+	f.Intrinsic.Control.Else
+		Function.Intrinsic.Variable.AddRV("NEXTLOT",1) 
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Con!rstopheader.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("NextLotno_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.NextLotno.End
+
+Program.Sub.PrintReport.Start
+F.Intrinsic.Control.SetErrorHandler("PrintReport_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Function.Intrinsic.Control.BlockEvents
+Function.Intrinsic.UI.InvokeWaitDialog("Printing in progress please wait ...")
+
+V.local.iBiRunID.Declare(long)
+V.local.iBILogID.Declare(long)
+V.Local.sRet.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.iRet.Declare(long)
+V.Local.iRptid.Declare(long)
+V.Local.iOutputMode.Declare(Long)
+V.local.sRecepient.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sAttach.Declare(String)
+V.Local.iUserID.Declare(long)
+V.Local.sSender.Declare(String)
+V.Local.sSubj.Declare(String)
+V.Local.sBody.Declare(String)
+
+F.Global.BI.GetRunID(V.local.iBIRunID)
+F.Global.BI.GetIDFromName("GCG_4887_LogTally.rpt",V.Local.iRptid)
+F.Global.BI.StartLogging(V.Local.iBIRunID,V.Local.iRptid,0,"",V.Local.iBILogID)
+
+F.Global.BI.StopLogging(V.local.iBILogID)
+
+v.Local.sRet.Set(v.Caller.User)
+
+V.Local.sParams.Set("PO*!*CName")
+
+F.Intrinsic.String.Build("{0}*!*{1}",v.Args.PO,v.Local.sRet,V.Local.sValues)
+'F.Intrinsic.String.Build("{0}*!*{1}","0000075",v.Local.sRet,V.Local.sValues)
+
+'F.Global.BI.RunReportPreProcessor(V.local.iBiRunID,V.local.iBILogID,V.Local.sParams,V.Local.sValues,"",2,True,"",-1,"",-1,"","",V.Local.iRet)
+
+Function.ODBC.Connection!conx.openConnection(variable.Ambient.Ccon, Variable.Ambient.Cuser, Variable.Ambient.Cpass)
+F.Intrinsic.String.Build("Select Recipient_email From BIR_Email_Seq a Left join BIR_Active_Seq b on a.report_id = b.report_id and a.company = b.company and Active = 1 Where a.Report_Id = '{0}' and a.Company = '{1}'",V.Local.iRptid,V.Caller.CompanyCode,V.Local.sSql)
+F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sSql,V.Local.sRecepient)
+f.Intrinsic.String.Replace(V.local.sRecepient,"#$#","@!@",V.local.sRecepient)
+f.ODBC.Connection!conx.Close 
+
+F.Global.Security.GetuserID(V.Caller.User,V.Caller.CompanyCode,V.Local.iUserID)
+F.Global.Security.GetUserEmail(V.Caller.User,V.Local.sSender)
+
+f.Intrinsic.String.Build("LOG Purchase Summary - PO:{0}",v.Screen.Form_LogScaling!txtPO.Text,V.Local.sSubj)
+f.Intrinsic.String.Build("{0}{1}",V.Local.sSubj,v.Ambient.NewLine,V.Local.sBody)
+f.Intrinsic.String.Build("{0}Scaled By:{1}",V.Local.sBody,v.Caller.User,V.Local.sBody)
+
+
+F.Intrinsic.String.Split(V.Local.sParams,"*!*",V.Local.sParams)
+F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+
+f.Intrinsic.String.Build("{0}\{1}.pdf",v.Caller.TempDir,v.Screen.Form_LogScaling!txtPO.Text,V.Local.sAttach)
+
+F.Global.Bi.SaveReport(v.Local.iRptID,1,V.Local.sParams,V.Local.sValues,V.Local.sAttach)  'save
+
+'AttachmentFileName*!*AttachmentFilePath
+F.Intrinsic.String.Concat(v.Screen.Form_LogScaling!txtPO.Text,".pdf","*!*",v.Caller.TempDir,V.Local.sAttach)
+
+'use *!* to pass  NAME & EMAIL ADDRESS
+'use @!@ as seprator for  multi[le EMAIL ADDRESS
+F.Global.Messaging.QueueMessage(v.Caller.CompanyCode,V.Local.iUserID,v.Caller.Caller,V.Local.sSubj,v.local.sSender,v.Local.sRecepient,V.Local.sBody,5,"",False,"","","","","","","",V.Local.sAttach,True)
+
+'V.Local.sFileTemp.Declare(String)
+'V.Local.iRetTemp.Declare(Long)
+'F.Intrinsic.String.Concat(V.Caller.TempDir,"\change.pdf",V.Local.sFileTemp)
+'F.Intrinsic.File.GetHandle(V.Local.iRetTemp)
+'F.Intrinsic.Task.ShellExec(V.Caller.Handle,"OPEN",V.Local.sFileTemp,"","",5)
+
+
+Function.Intrinsic.UI.CloseWaitDialog
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrintReport_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.UI.CloseWaitDialog
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.PrintReport.End
+
+Program.Sub.txtLength_Change.Start
+F.Intrinsic.Control.SetErrorHandler("PrintReport_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.lRet.Declare(long)
+
+f.Intrinsic.Control.If(v.Global.iRow,<>,-1)
+	F.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.endif
+
+f.Intrinsic.String.Len(v.Screen.Form_LogScaling!txtLength.Text,V.Local.lRet)
+f.Intrinsic.Control.If(V.Local.lRet,=,2)
+	gui.Form_LogScaling.txtDiam.SetFocus 
+f.Intrinsic.Control.endif
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrintReport_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtLength_Change.End
+
+Program.Sub.txtDiam_Change.Start
+F.Intrinsic.Control.SetErrorHandler("txtLength_Change_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.lRet.Declare(long)
+
+f.Intrinsic.Control.If(v.Global.iRow,<>,-1)
+	F.Intrinsic.Control.ExitSub
+f.Intrinsic.Control.endif
+
+f.Intrinsic.String.Len(v.Screen.Form_LogScaling!txtDiam.Text,V.Local.lRet)
+f.Intrinsic.Control.If(V.Local.lRet,=,2)
+	gui.Form_LogScaling.txtGrade.SetFocus 
+f.Intrinsic.Control.endif
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtLength_Change_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtDiam_Change.End
+
+Program.Sub.GsGc_LogTally_RowClick.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+'
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.lRet.Declare(long)
+
+v.Global.iRow.Set(v.Args.ROWINDEX)
+gui.Form_LogScaling.ddlSortCode.Text(Variable.DataTable.DTGrid(v.Args.ROWINDEX).partdesc!FieldVal) 
+gui.Form_LogScaling.txtDiam.Text(Variable.DataTable.DTGrid(v.Args.ROWINDEX).diam!FieldVal)
+gui.Form_LogScaling.txtLength.Text(Variable.DataTable.DTGrid(v.Args.ROWINDEX).Length!FieldVal)
+gui.Form_LogScaling.lblLOT.Caption(Variable.DataTable.DTGrid(v.Args.ROWINDEX).LOT!FieldVal)
+
+
+V.Local.sRet.Set(Variable.DataTable.DTGrid(v.Args.ROWINDEX).Heat!FieldVal)
+f.Intrinsic.String.Occurs(V.Local.sRet,"-",V.Local.lRet)
+f.Intrinsic.Control.If(V.Local.lRet,>,0)
+	f.Intrinsic.String.Split(V.Local.sRet,"-",V.Local.sRet)
+	V.Local.sRet.Set(V.Local.sRet(0))
+	gui.Form_LogScaling.chkXlog.Value(1)
+f.Intrinsic.Control.Else
+	gui.Form_LogScaling.chkXlog.Value(0)
+f.Intrinsic.Control.EndIf 
+
+gui.Form_LogScaling.txtGrade.Text(V.Local.sRet)
+
+gui.Form_LogScaling.cmdclear.Visible(True)
+'
+gui.Form_LogScaling.cmd_AddLog.SetFocus 
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GsGc_LogTally_RowClick.End
+
+Program.Sub.cmdclear_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Clear_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+gui.Form_LogScaling.txtLength.Text(0)
+gui.Form_LogScaling.txtDiam.Text(0)
+gui.Form_LogScaling.txtGrade.Text(0)
+gui.Form_LogScaling.chkXlog.Value(0)
+
+v.Global.iRow.Set(-1)
+gui.Form_LogScaling.cmdclear.Visible(false)
+gui.Form_LogScaling.lblLOT.Caption("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Clear_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdclear_Click.End
+
+Program.Sub.ddlHCmpy_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdclear_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTemp.Declare(String)
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+	V.Local.sTemp.Set(V.Screen.Form_LogScaling!ddlHCmpy.Text)
+	V.Local.sTemp.Set(V.Local.sTemp.Trim)
+
+	gui.Form_LogScaling.ddlDriver.ClearItems 
+	f.Intrinsic.String.Build("select M_Name,M_Name from gcg_4887_Maintenance where  M_Type = 'D' and ucase(M_Hauling_CO) = '{0}'",V.Local.sTemp.UCase,V.Local.sSql)
+
+
+	f.Data.Dictionary.CreateFromSQL("DICPR","con",V.Local.sSql)
+	F.Data.Dictionary.SetDefaultReturn("DICPR", "")
+	gui.Form_LogScaling.ddlDriver.AddItems("Dictionary","DICPR")
+	f.Data.Dictionary.Close("DICPR")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdclear_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.ddlHCmpy_Click.End
+
+Program.Sub.FrmMaint_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'
+F.ODBC.Connection!con.Close
+f.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.FrmMaint_UnLoad.End
+
+Program.Sub.cmdSave_Click.Start
+Program.Sub.cmdSave_Click.End
+
+Program.Sub.LoadMaint.Start
+F.Intrinsic.Control.SetErrorHandler("LoadMaint_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+gui.FrmMaint.ddlType.AddItem("Logger")
+gui.FrmMaint.ddlType.AddItem("Driver")
+
+'F.ODBC.Connection!Con.OpenRecordsetRO("rst","select  M_Type,M_Name,M_HAuling_CO from gcg_4887_Maintenance")
+'F.Intrinsic.Control.If(V.ODBC.Con!rst.EOF,=,False)
+'	Function.Intrinsic.Variable.AddRV ("NEXTLOT",V.ODBC.Con!rst.FieldValTrim!F_LONG) 
+'f.Intrinsic.Control.Else
+'	Function.Intrinsic.Variable.AddRV("NEXTLOT",1) 
+'F.Intrinsic.Control.EndIf
+'F.ODBC.Con!rst.Close
+
+f.Data.DataTable.CreateFromSQL("DTGrid","CON","select M_HAuling_CO,M_Type,M_Name,' ' as 'Delete' from gcg_4887_Maintenance",True)
+gui.FrmMaint.ddlType.Text("Logger")
+'F.Data.DataTable.AddColumn("DTGrid","Delete",String)
+
+gui.FrmMaint..Show 
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadMaint_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadMaint.End
+
+Program.Sub.ddlType_Click.Start
+F.Intrinsic.Control.SetErrorHandler("LoadMaint_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sType.Declare(String)
+V.Local.sSort.Declare(String)
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+f.Intrinsic.Control.If(v.Screen.FrmMaint!ddlType.Text,=,"Driver")
+	gui.FrmMaint.lblName2.Visible(True)
+	gui.FrmMaint.txtName2.Visible(True)
+	gui.FrmMaint.lbl1name1.Caption("Company Name")
+	gui.FrmMaint.lblName2.Caption("Driver Name")
+	V.Local.sType.Set("M_Type='D'")
+	V.Local.sSort.Set("M_HAuling_CO ASC,M_Name ASC")
+f.Intrinsic.Control.Else
+	gui.FrmMaint.lblName2.Visible(False)
+	gui.FrmMaint.txtName2.Visible(False)
+	gui.FrmMaint.lbl1name1.Caption("Logger Name")
+	V.Local.sType.Set("M_Type='L'")
+	V.Local.sSort.Set("M_Name ASC")
+f.Intrinsic.Control.endif
+
+
+
+f.Data.DataView.Create("DTGrid","DVGrid",22,V.Local.sType,V.Local.sSort)
+
+
+gui.FrmMaint.GsGrid.AddGridviewFromDataview("GVGrid","DTGrid","DVGrid")
+
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid","M_Name","HeaderFontBold","True")
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid","M_HAuling_CO","HeaderFontBold","True")
+
+'gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid", "M_RECID", "Visible", False)
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid", "M_Type", "Visible", False)
+
+f.Intrinsic.Control.If(v.Screen.FrmMaint!ddlType.Text,=,"Logger")
+	gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid", "M_Hauling_CO", "Visible", False)
+f.Intrinsic.Control.endif
+
+
+gui.FrmMaint.GsGrid.SetGridViewProperty("GVGrid","AllowColumnMoving",False)
+gui.FrmMaint.GsGrid.SetGridViewProperty("GVGrid","OptionBehaviorEditable",False)
+gui.FrmMaint.GsGrid.SetGridViewProperty("GVGrid", "Enableappearanceevenrow", "True")
+
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid","M_Name","Caption","Name")
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid","M_HAuling_CO","Caption","Company Name")
+
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid","M_Name","MinWidth","60")	
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid","M_HAuling_CO","MinWidth","60")	
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+gui.FrmMaint.GsGrid.ColumnEdit("GVGrid","Delete", "EditorButton", "Delete")
+gui.FrmMaint.GsGrid.SetColumnProperty("GVGrid", "Delete", "MaxWidth",100)
+
+gui.FrmMaint.GsGrid.MainView("GVGrid")
+
+
+Function.Data.DataView.Close("DTGrid","DVGrid")
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadMaint_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ddlType_Click.End
+
+Program.Sub.cmdAdd_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdPClick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sRet1.Declare(String)
+V.Local.sRet2.Declare(String)
+
+f.Intrinsic.Control.If(v.Screen.FrmMaint!ddlType.Text,=,"Logger")
+	V.Local.sRet.Set("L")
+	V.Local.sRet1.Set(v.Screen.FrmMaint!txtname1.Text)
+	V.Local.sRet2.Set("")
+f.Intrinsic.Control.Else
+	V.Local.sRet.Set("D")
+	V.Local.sRet1.Set(v.Screen.FrmMaint!txtname2.Text)
+	V.Local.sRet2.Set(v.Screen.FrmMaint!txtname1.Text)
+f.Intrinsic.Control.endif
+
+
+f.Data.DataTable.AddRow("DTGrid","M_Type",V.Local.sRet,"M_Name",V.Local.sRet1.UCase,"M_HAuling_CO",V.Local.sRet2.UCase)
+
+gui.FrmMaint.txtname1.text("")
+gui.FrmMaint.txtname2.text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdPClick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdAdd_Click.End
+
+Program.Sub.txtname1_KeyPressEnter.Start
+F.Intrinsic.Control.SetErrorHandler("cmdAdd_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.Screen.FrmMaint!ddlType.Text,=,"Logger")
+	f.Intrinsic.Control.CallSub(cmdadd_click)
+f.Intrinsic.Control.endif
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdAdd_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtname1_KeyPressEnter.End
+
+Program.Sub.txtname2_KeyPressEnter.Start
+F.Intrinsic.Control.SetErrorHandler("txtname1_KeyPressEnter_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+f.Intrinsic.Control.If(v.Screen.FrmMaint!ddlType.Text,=,"Driver")
+	f.Intrinsic.Control.CallSub(cmdadd_click)
+f.Intrinsic.Control.endif
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtname1_KeyPressEnter_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtname2_KeyPressEnter.End
+
+Program.Sub.GsGrid_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("txtname2_KeyPressEnter_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+f.Intrinsic.Control.If(v.Args.column,=,"Delete")
+	Function.Data.DataTable.DeleteRow("DTGrid",v.Args.RowIndex)
+f.Intrinsic.Control.EndIf 
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtname2_KeyPressEnter_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GsGrid_RowCellClick.End
+
+Program.Sub.cmdSaveMaint_Click.Start
+F.Intrinsic.Control.SetErrorHandler("GsGrid_RowCellClick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'mode 7 ---> delete add modify
+'mode 256 ---> add modify
+
+F.Data.DataTable.SaveToDB("DTGrid","con","gcg_4887_Maintenance","M_Type*!*M_Name",7,"M_Type@!@M_Type*!*M_Name@!@M_Name*!*M_Hauling_CO@!@M_Hauling_CO")	
+f.Intrinsic.UI.Msgbox("Data saved successfully")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GsGrid_RowCellClick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdSaveMaint_Click.End
+
+Program.Sub.txtGrade_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("cmdSaveMaint_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+gui.Form_LogScaling.txtGrade.BackColor(v.Color.White)
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdSaveMaint_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4887_LogTally.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtGrade_LostFocus.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12/21/2017 1:51:22 PM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$This will be a .Net GAB dashboard that facilitates workflows.  
+
+1. 3 modes, by department. The three modes will have different data to be displayed as it relates to the workflow being used.
+2. Will be able to complete/signoff and track workflows
+3. Workflow template that is used will be determined by Customer Service Request Type.
+4. Work Flow templates will still be facilitated in Standard GSS (Business Intelligence>Admin>Workflow Template)
+5. Dashboard will be able to export to excel.
+6. Sorting, Grouping, Filtering capabilities in the grid(s).
+Program.Sub.Comments.End
