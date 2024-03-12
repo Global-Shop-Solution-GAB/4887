@@ -1,0 +1,6 @@
+CREATE TABLE "gcg_4887_Maintenance"(
+ "M_RECID" IDENTITY DEFAULT '0',
+ "M_Type" VARCHAR(1),
+ "M_Name" VARCHAR(30),
+ "M_Hauling_CO" VARCHAR(30),
+ UNIQUE ("M_RECID"));
